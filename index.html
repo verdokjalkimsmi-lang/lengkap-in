@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LENGKAP-IN</title>
+    <title>Layanan Elektronik Kelengkapan Berkas - LENGKAP-IN</title>
     <link rel="stylesheet" href="style.css">
     <!-- SweetAlert2 for beautiful notifications -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -30,20 +30,20 @@
 
         <form id="uploadForm">
             <div class="input-group">
-                <label for="nama_pemohon">Nama Pemohon</label>
-                <div class="input-icon-wrapper">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" id="nama_pemohon" name="nama_pemohon" required
-                        placeholder="Masukkan Nama Lengkap">
-                </div>
-            </div>
-
-            <div class="input-group">
                 <label for="nomor_pemohon">Nomor Permohonan</label>
                 <div class="input-icon-wrapper">
                     <i class="fa-solid fa-id-card"></i>
                     <input type="text" id="nomor_pemohon" name="nomor_pemohon" required
                         placeholder="Masukkan Nomor Permohonan">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="nama_pemohon">Nama Pemohon</label>
+                <div class="input-icon-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="nama_pemohon" name="nama_pemohon" required
+                        placeholder="Masukkan Nama Lengkap">
                 </div>
             </div>
 
@@ -95,7 +95,7 @@
 
             <div class="upload-section">
                 <div class="upload-header">
-                    <label>Kekurangan Berkas (PDF / JPG)</label>
+                    <label>Upload Kelengkapan Berkas (PDF / JPG)</label>
                     <button type="button" id="addFileBtn" class="btn-sm"><i class="fa-solid fa-plus"></i> Tambah
                         File</button>
                 </div>
@@ -111,6 +111,11 @@
             <button type="submit" class="submit-btn" id="submitBtn">
                 <i class="fa-solid fa-paper-plane"></i> Kirim Berkas
             </button>
+
+            <!-- Copyright Footer inside container -->
+            <div style="text-align: center; margin-top: 25px; font-size: 12px; color: #64748b; font-weight: 500;">
+                &copy; 2026 Kantor Imigrasi Kelas I Non TPI Sukabumi. All rights reserved.
+            </div>
         </form>
 
         <div id="loadingOverlay" class="loading-overlay">
