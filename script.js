@@ -1,6 +1,6 @@
 // Konfigurasi URL Google Apps Script Web App
 // GANTI URL DI BAWAH INI DENGAN URL WEB APP GAS ANDA!
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbwN7PMIEEXxpXTWWuK3FtqrNhVMriCRu8VS1SgjCpCd-d3aiTyZCZFGQzdrDdSy5XQ/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyWeDqbg6hFfuNeSkYDF3f0mfVxM0NJ3OdPnUWviZ-zqB7IDWbBhIEYTRE82gOTJ7_nlA/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Inisialisasi Flatpickr untuk kalender dengan format DD/MM/YYYY yang pasti
