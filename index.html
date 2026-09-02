@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan Elektronik Kelengkapan Berkas - LENGKAP-IN</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Upload Kekurangan Berkas Paspor</title>
     <link rel="stylesheet" href="style.css">
     <!-- SweetAlert2 for beautiful notifications -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -23,28 +22,28 @@
     <div class="container">
         <div class="form-header">
             <div class="logo-container-img">
-                <img src="LOGO 2.png" alt="Logo LENGKAP-IN" class="logo-img">
+                <img src="LOGO_2.png" alt="Logo LENGKAP-IN" class="logo-img">
             </div>
             <div class="header-divider"></div>
-            <p>Form Kelengkapan Berkas Permohonan Paspor.</p>
+            <p>Silakan unggah dokumen persyaratan yang kurang.</p>
         </div>
 
         <form id="uploadForm">
-            <div class="input-group">
-                <label for="nomor_pemohon">Nomor Permohonan</label>
-                <div class="input-icon-wrapper">
-                    <i class="fa-solid fa-id-card"></i>
-                    <input type="text" id="nomor_pemohon" name="nomor_pemohon" required
-                        placeholder="Masukkan Nomor Permohonan">
-                </div>
-            </div>
-
             <div class="input-group">
                 <label for="nama_pemohon">Nama Pemohon</label>
                 <div class="input-icon-wrapper">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" id="nama_pemohon" name="nama_pemohon" required
                         placeholder="Masukkan Nama Lengkap">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="nomor_pemohon">Nomor Permohonan</label>
+                <div class="input-icon-wrapper">
+                    <i class="fa-solid fa-id-card"></i>
+                    <input type="text" id="nomor_pemohon" name="nomor_pemohon" required
+                        placeholder="Masukkan Nomor Permohonan">
                 </div>
             </div>
 
@@ -83,23 +82,25 @@
                     <select id="petugas" name="petugas" required>
                         <option value="" disabled selected>-- Pilih Petugas --</option>
                         <option value="M. Argina Farmi">M. Argina Farmi</option>
-                        <option value="Alifia Meylizha Rahmani">Alifia Meylizha Rahmani</option>
-                        <option value="Hosiana Rebeka">Hosiana Rebeka</option>
-                        <option value="Elis Lisnawati">Elis Lisnawati</option>
+                        <option value="Alifia">Alifia</option>
+                        <option value="Hossiana">Hossiana</option>
+                        <option value="Elis">Elis</option>
                         <option value="Dede Hermansyah">Dede Hermansyah</option>
-                        <option value="Tulus Muhammad Arifin">Tulus Muhammad Arifin</option>
-                        <option value="Nadya Fahmalena">Nadya Fahmalena</option>
-                        <option value="Zacky Muhamad Ramdhan">Zacky Muhamad Ramdhan</option>
+                        <option value="Tulus">Tulus</option>
+                        <option value="Nadya">Nadya</option>
+                        <option value="Zacky">Zacky</option>
                     </select>
                 </div>
             </div>
 
             <div class="upload-section">
                 <div class="upload-header">
-                    <label>Upload Kelengkapan Berkas (PDF / JPG)</label>
+                    <label>Kekurangan Berkas (PDF / JPG)</label>
                     <button type="button" id="addFileBtn" class="btn-sm"><i class="fa-solid fa-plus"></i> Tambah
                         File</button>
                 </div>
+                <p class="upload-hint">Foto akan dikompres otomatis agar lebih cepat terkirim. Ukuran maks. disarankan
+                    10 MB per file.</p>
                 <div id="fileInputsContainer">
                     <div class="file-input-wrapper">
                         <input type="file" name="fileUpload[]" accept=".pdf, .jpg, .jpeg" required class="file-input">
@@ -112,16 +113,13 @@
             <button type="submit" class="submit-btn" id="submitBtn">
                 <i class="fa-solid fa-paper-plane"></i> Kirim Berkas
             </button>
-
-            <!-- Copyright Footer inside container -->
-            <div style="text-align: center; margin-top: 25px; font-size: 12px; color: #64748b; font-weight: 500;">
-                &copy; LENGKAP-IN Ver.1 © PPPK - MMXXV . All rights reserved.
-            </div>
         </form>
 
         <div id="loadingOverlay" class="loading-overlay">
             <div class="spinner"></div>
-            <p>Sedang Mengirim Berkas...</p>
+            <p id="loadingMainText">Sedang Mengirim Berkas...</p>
+            <p class="loading-subtext">Mohon jangan menutup halaman atau mengunci layar HP selama proses ini
+                berlangsung.</p>
         </div>
     </div>
 

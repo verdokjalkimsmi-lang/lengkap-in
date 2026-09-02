@@ -200,6 +200,12 @@ body {
     color: var(--text-main);
 }
 
+.upload-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
 .btn-sm {
     background: var(--primary-light);
     color: white;
@@ -350,6 +356,134 @@ body {
     font-weight: 600;
 }
 
+.loading-overlay .loading-subtext {
+    font-weight: 400;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    max-width: 280px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ===== Kartu Notifikasi PERHATIAN (dipakai di dalam SweetAlert2 popup) ===== */
+.perhatian-card {
+    font-family: 'Inter', sans-serif;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 5px solid #0a1a3a;
+    text-align: center;
+}
+
+.perhatian-header {
+    background: #12244a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 14px;
+}
+
+.perhatian-tri {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.perhatian-header h2 {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.perhatian-body {
+    padding: 22px 20px 14px;
+    color: #111111;
+}
+
+.perhatian-body .line1 {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.perhatian-body hr {
+    border: none;
+    border-top: 3px solid #12244a;
+    width: 55%;
+    margin: 0 auto 14px;
+}
+
+.perhatian-body .line2 {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.perhatian-body .line2 .highlight {
+    color: #8b1a1a;
+}
+
+.perhatian-body .line3 {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #222222;
+}
+
+.perhatian-footer {
+    background: repeating-linear-gradient(-45deg, #12244a 0px, #12244a 18px, #ffffff 18px, #ffffff 36px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 12px;
+}
+
+.perhatian-footer img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.perhatian-footer .footer-text {
+    color: #f2c94c;
+    font-weight: 800;
+    font-size: 12.5px;
+    line-height: 1.25;
+    text-shadow: 1px 1px 0 #0a1a3a;
+}
+
+@media (max-width: 480px) {
+    .perhatian-header h2 {
+        font-size: 19px;
+    }
+    .perhatian-tri {
+        width: 26px;
+        height: 26px;
+    }
+    .perhatian-body .line1 {
+        font-size: 13px;
+    }
+    .perhatian-body .line2 {
+        font-size: 12.5px;
+    }
+    .perhatian-body .line3 {
+        font-size: 11px;
+    }
+    .perhatian-footer img {
+        width: 38px;
+        height: 38px;
+    }
+    .perhatian-footer .footer-text {
+        font-size: 11px;
+    }
+}
+
 .input-row {
     display: flex;
     gap: 15px;
@@ -366,33 +500,15 @@ body {
         padding: 10px;
     }
 
-.container {
+    .container {
         padding: 24px 16px;
         margin: 0;
         border-radius: 20px;
-        overflow: visible; /* Pastikan overflow visible di mobile */
     }
 
     .form-header {
-        /* Membuat header melayang */
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        
-        /* Mengatur background agar teks di bawahnya tidak menumpuk saat scroll */
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        
-        /* Menyesuaikan margin dan padding untuk menutupi padding bawaan container */
-        margin: -24px -16px 20px -16px; 
-        padding: 20px 16px 15px 16px;
-        
-        /* Mengikuti lengkungan container dan memberi batas bawah */
-        border-radius: 20px 20px 0 0;
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }}
+        margin-bottom: 20px;
+    }
     
     /* Pertahankan berdampingan di HP agar tidak terlalu panjang */
     .input-row {
