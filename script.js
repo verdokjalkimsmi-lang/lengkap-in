@@ -1,6 +1,6 @@
 // Konfigurasi URL Google Apps Script Web App
 // GANTI URL DI BAWAH INI DENGAN URL WEB APP GAS ANDA!
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbyiSEi8ecm7TfuqT_UfBOExRA2vOmPU6zm9CfHPC6kQaSRVW7ayhbKLNKWNN9874x84/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzS6sgB2rfVXlnEh-HOLf9zivInN4YakvUF7DzUP5kmf0GYwNrG5NL7aMqx1-rbXGcP_g/exec';
 
 // Ukuran maksimum sisi terpanjang gambar setelah dikompres (px)
 const IMAGE_MAX_DIMENSION = 1600;
