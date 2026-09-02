@@ -1,6 +1,6 @@
 // Konfigurasi URL Google Apps Script Web App
 // GANTI URL DI BAWAH INI DENGAN URL WEB APP GAS ANDA!
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbzK-zsXseoVgMrFX3u5Dj7yFXITmFkVR1RtAFFhtKHC1A8sGjk3TlbZazSbR9v89_phyQ/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyiSEi8ecm7TfuqT_UfBOExRA2vOmPU6zm9CfHPC6kQaSRVW7ayhbKLNKWNN9874x84/exec';
 
 // Ukuran maksimum sisi terpanjang gambar setelah dikompres (px)
 const IMAGE_MAX_DIMENSION = 1600;
@@ -278,7 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `,
-            width: 560,
+            // Lebar menyesuaikan layar: di HP pakai persentase lebar layar (bukan angka fix)
+            // supaya kartu tidak terasa sempit/memanjang (portrait), di PC tetap 560px seperti semula.
+            width: window.innerWidth < 480 ? '92%' : 560,
             padding: 0,
             background: '#ffffff',
             showConfirmButton: true,
